@@ -27,3 +27,6 @@ https://github.com/pattymicaelazurita/recicla
 
 ## Proyecto deployado
 https://recicla.herokuapp.com/
+
+## Video
+https://drive.google.com/file/d/1QMvCfiy6m_P53jJEJqAeRWTeaH4pbTgo/view?usp=sharing
