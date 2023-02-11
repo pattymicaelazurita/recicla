@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { PALABROS } from "../assets/preguntas";
+import Contexto from "../contexto/Contexto";
 
 const Juego = () => {
     const navegacion=useNavigate();
     const letras="ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
     const misColores=[{backgroundColor:"white"},{backgroundColor:"green", color:"white"},{backgroundColor:"red", color:"white"}]
     const letras_array=letras.split("")
+    const {escribirCorrecta}=useContext(Contexto);
     const [azar,setAzar]=useState(0);
     const [palabra,setPalabra]=useState([])
     const [misLetras,setMisLetras]=useState([])
@@ -19,6 +21,7 @@ const Juego = () => {
     
     useEffect(()=>{
         setPalabra(PALABROS[azar].palabro.split(""))
+        escribirCorrecta(PALABROS[azar].palabro)
     },[azar])
     
     const pulsado=(e)=>{
