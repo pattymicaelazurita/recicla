@@ -52,7 +52,9 @@ const Juego = () => {
     return (
         <>
         <div className="pregunta">
-            {PALABROS[azar].pregunta}
+            <h1>DEMUESTRA TU CONOCIMIENTO Y AYUDA A SALVAR EL PLANETA</h1>
+            <h2>PISTA: {PALABROS[azar].pregunta} </h2>
+            
         </div>
         <div className="palabra">
             {

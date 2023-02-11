@@ -3,12 +3,26 @@ img{
 }
 .imagen{
   margin: 20px auto;
-  width: 160px;
+  width: 15%;
+}
+
+.imagenOtra{
+  margin: 20px auto;
+  width: 35%;
 }
 .palabra{
   display: flex;
 }
-
+.encabezado{
+  margin: 20px auto;
+  text-align: center;
+  color: green;
+}
+.encabezadoFin{
+  margin: 20px auto;
+  text-align: center;
+  color: red;
+}
 .palo{
   margin: 5px;
   border-bottom: 3px solid black;
@@ -28,4 +42,21 @@ img{
   cursor: pointer;
   width: 35px;
   text-align: center;
+}
+
+.boton{
+  margin: auto 45%;
+  text-align: center;
+  color: white;
+  background-color: rgb(86, 187, 221);
+  align-self: center;
+  width: 150px;
+  height: 50px;
+}
+
+.instruccion{
+  margin: 20px auto;
+  text-align: center;
+  color: black;
+  padding: 0 200px;
 }

@@ -5,11 +5,13 @@ const Ganado = () => {
     const navegacion=useNavigate();
     return (
         <>
-        <h1>Muy bien, has ganado, y continuas manteniendo tu cabeza sobre los hombros</h1>
-        <div className="imagen">
-        <img src={require(`../assets/el_ahorcado1.png`)} alt=""/>
+        <div className="encabezado">
+            <h1>¡CORRECTO!</h1>
         </div>
-        <button onClick={()=>navegacion("/juego/")}>Volver a jugar</button>
+        <div className="imagen">
+        <img src={require(`../assets/ganar.png`)} alt=""/>
+        </div>
+        <button  className="boton" onClick={()=>navegacion("/juego/")}>Volver a jugar</button>
         </>
     )
 }

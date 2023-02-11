@@ -7,12 +7,14 @@ const Final = () => {
     const navegacion=useNavigate();
     return (
         <>
-        <h1>Vaya, respuesta incorrecta</h1>
-        <h2>La respuesta correcta era: <strong>{laCorrecta}</strong></h2>
-        <div className="imagen">
-        <img src={require(`../assets/el_ahorcado6.png`)} alt=""/>
+        <div className="encabezadoFin">
+            <h1><strong>¡OH, NO! INTENTO FALLIDO</strong></h1>
+            <h2>La respuesta correcta era: <strong>{laCorrecta}</strong></h2>
         </div>
-        <button onClick={()=>navegacion("/juego/")}>Volver a jugar</button>
+        <div className="imagenOtra">
+            <img src={require(`../assets/perder.png`)} alt=""/>
+        </div>
+        <button  className="boton" onClick={()=>navegacion("/juego/")}>Volver a jugar</button>
         </>
     )
 }
