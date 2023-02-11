@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import { PALABROS } from "../assets/preguntas";
 
 const Juego = () => {
-    const letras="ABCDEFGHIJKLMNÑOPQRSTUVWXYYZ"
+    const letras="ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+    const misColores=[{backgroundColor:"white"},{backgroundColor:"green", color:"white"},{backgroundColor:"red", color:"white"}]
     const letras_array=letras.split("")
     const [azar,setAzar]=useState(0);
     const [palabra,setPalabra]=useState([])
     const [misLetras,setMisLetras]=useState([])
+    const [correctas,setCorrectas]=useState([])
+    const [erroneas,setErroneas]=useState([])
     useEffect(()=>{
         setAzar(Math.floor(Math.random()*PALABROS.length))
     },[])
@@ -18,6 +21,11 @@ const Juego = () => {
     const pulsado=(e)=>{
         const letra=e.target.innerHTML;
         setMisLetras([...misLetras,(letra)])
+        if(palabra.indexOf(letra)>=0){
+            setCorrectas([...correctas,(letra)])
+        }else{
+            setErroneas([...erroneas,(letra)])
+        }
     }
 
     return (
@@ -39,7 +47,15 @@ const Juego = () => {
         <div className="botones">
             {
                 letras_array.map((letra)=>(
-                    <button key={letra} onClick={pulsado} >{letra}</button>
+                    (correctas.find(e=>e===letra))
+                    ?
+                    <button style={misColores[1]} key={letra}>{letra}</button>
+                    :
+                    (erroneas.find(e=>e===letra))
+                    ?
+                    <button style={misColores[2]} key={letra}>{letra}</button>
+                    :
+                    <button style={misColores[0]} key={letra} onClick={pulsado} >{letra}</button>
                 ))
             }
         </div>
