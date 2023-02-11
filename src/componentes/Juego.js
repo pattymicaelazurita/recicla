@@ -15,6 +15,10 @@ const Juego = () => {
         setPalabra(PALABROS[azar].palabro.split(""))
     },[azar])
     
+    const pulsado=(e)=>{
+        const letra=e.target.innerHTML;
+        setMisLetras([...misLetras,(letra)])
+    }
 
     return (
         <>
@@ -35,7 +39,7 @@ const Juego = () => {
         <div className="botones">
             {
                 letras_array.map((letra)=>(
-                    <button key={letra}>{letra}</button>
+                    <button key={letra} onClick={pulsado} >{letra}</button>
                 ))
             }
         </div>
