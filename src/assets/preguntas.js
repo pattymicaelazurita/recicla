@@ -1,33 +1,30 @@
 export const PALABROS=[
     {
-        pregunta:"Método especial para recorrer array",
-        palabro:"FOREACH"
+        pregunta:"Residuos sólidos que han sido generados por el ser humanos",
+        palabro:"BASURA"
     }, {
-        pregunta:"Sustituto del condicional IF",
-        palabro:"SWITCH"
+        pregunta:"Reciclaje completo de materia orgánica",
+        palabro:"COMPOSTAJE"
     }, {
-        pregunta:"Apellido del programador creador de JavaScript",
-        palabro:"EICH"
+        pregunta:"Degradar el estado natural del medio ambiente",
+        palabro:"CONTAMINAR"
     }, {
-        pregunta:"Propiedad que permite crear contenido HTML en una caja",
-        palabro:"INNERHTML"
+        pregunta:"Color del contenedor de basura para papel y cartón",
+        palabro:"AZUL"
     }, {
-        pregunta:"Método que convierte un string en un array",
-        palabro:"SPLIT"
+        pregunta:"Color del contenedor de basura para vidrio",
+        palabro:"VERDE"
     }, {
-        pregunta:"Método que convierte un array en un texto",
-        palabro:"JOIN"
+        pregunta:"Elementos que no se encuentran compuestos por componentes orgánicos",
+        palabro:"INORGANICOS"
     }, {
-        pregunta:"Canal de Youtube que hay que suscribirse si o si",
-        palabro:"SOYJAB"
+        pregunta:"Disminuir el volumen de los productos",
+        palabro:"REDUCIR"
     }, {
-        pregunta:"Propiedad que cuenta el número de caracteres de un string",
-        palabro:"LENGTH"
+        pregunta:"Acción de dar un nuevo uso a un objeto que ha sido previamente utilizado",
+        palabro:"REUTILIZAR"
     }, {
-        pregunta:"Método que permite seleccionar una parte de un string",
-        palabro:"SUBSTRING"
-    }, {
-        pregunta:"Método que permite unir dos arrays en uno",
-        palabro:"CONCAT"
+        pregunta:"Fabricar productos nuevos en base a materiales obtenidos de otros usados",
+        palabro:"RECICLAR"
     }
 ];
