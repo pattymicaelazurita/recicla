@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import { PALABROS } from "../assets/preguntas";
 
 const Juego = () => {
+    const letras="ABCDEFGHIJKLMNÑOPQRSTUVWXYYZ"
+    const letras_array=letras.split("")
     const [azar,setAzar]=useState(0);
-    
     const [palabra,setPalabra]=useState([])
-    const [letras,setLetras]=useState([])
+    const [misLetras,setMisLetras]=useState([])
     useEffect(()=>{
         setAzar(Math.floor(Math.random()*PALABROS.length))
     },[])
@@ -23,7 +24,7 @@ const Juego = () => {
         <div className="palabra">
             {
                 palabra.map((letra,i)=>(
-                    letras.indexOf(letra)===-1
+                    misLetras.indexOf(letra)===-1
                     ?
                         <div className="palo" key={i}></div>
                     :
@@ -31,7 +32,13 @@ const Juego = () => {
                 ))
             }
         </div>
-        <div className="botones"></div>
+        <div className="botones">
+            {
+                letras_array.map((letra)=>(
+                    <button key={letra}>{letra}</button>
+                ))
+            }
+        </div>
         <div className="imagen"></div>
         </>
     )
