@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# RECICLAJE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Autora: Patty Zurita
 
-## Available Scripts
+Para este proyecto se ha generado un juego con React con temática de reciclaje. El modelo se basa en el juego del ahorcado, en el cual se debe completar la respuesta, sobre la pista existente, letra por letra previo a que culminen los intentos, o en este caso previo a que la basura se apodere del mundo. 
 
-In the project directory, you can run:
+Para el juego se tiene una pantalla de inicio, la cual cumple con la función de informar las instrucciones a su usuario y dar inicio al juego. En el juego existe la posibilidad de fallar en los intentos lo cual nos llevará a pantalla de perdida; mientras que en caso de encontrar la respuesta correcta será redirigido a pantalla de correcto.
 
-### `npm start`
+## Configuraciones y desarrollo técnico
+Para empezar se generó proyecto de aplicativo react en blanco mediante linea de comandos haciendo uso de "npx create-react-app nombre". Con esta estructura se procedió a incluir componente, contexto y assets que permitirían el desarrollo del mismo. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Por otro lado, para este proyecto se requirió instalar react router, lo cual se realizó en línea de comandos "npm -i react-router-dom"
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+PAra el proyecto se consideraron 4 escenarios que resultarían esenciales para un buen desempeño. Estos son la introducción, el juego, el escenario de ganar y el escenario de perder. Todo esto se vio traducido a las diferentes clases JS que se crearon a modo de componentes. Ante esto se realizaron las respectivas asociaciones y configuraciones, tanto a nivel front-end como back-end. Para otorgar los estilos se utilizó la clase de index.css
 
-### `npm test`
+Cabe resaltar que uno de los factores fundamentales para el juego es que las preguntas se puedna desplegar de manera aleatoria por lo que se cuenta con un repositorio de preguntas previamente establecidas, de las que el algoritmo podrá sortear. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Otro aspecto esencial es el uso de botones y la retencion de información que estos proveen. Para esto se usaron varias funciones en la clase juego para generar cada letra e identificarla como input al momento de reconocer letras de la palabra a adivinar. De igual manera, es importante el manejo de efecto visual sobre letras faltantes que se ha contemplado de igual manera dentro de la mencionada clase. 
 
-### `npm run build`
+Cabe mencionar que para que se pudieran relacionar los diferentes escenarios en la palicación (App.js) se tiene contemplada herencia de hijos en base a contexto y componentes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Enlace de referencia
+Para desarrollo de la palicación se tomó para aprendizaje el siguiente video https://www.youtube.com/watch?v=5pWKsNz3E3A
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Repositorio GIT
+https://github.com/pattymicaelazurita/recicla
