@@ -1,3 +1,10 @@
+img{
+  width:100%;
+}
+.imagen{
+  margin: 20px auto;
+  width: 160px;
+}
 .palabra{
   display: flex;
 }

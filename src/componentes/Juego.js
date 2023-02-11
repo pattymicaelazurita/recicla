@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { PALABROS } from "../assets/preguntas";
 
 const Juego = () => {
+    const navegacion=useNavigate();
     const letras="ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
     const misColores=[{backgroundColor:"white"},{backgroundColor:"green", color:"white"},{backgroundColor:"red", color:"white"}]
     const letras_array=letras.split("")
@@ -10,6 +12,7 @@ const Juego = () => {
     const [misLetras,setMisLetras]=useState([])
     const [correctas,setCorrectas]=useState([])
     const [erroneas,setErroneas]=useState([])
+    const [imagen,setImagen]=useState(1)
     useEffect(()=>{
         setAzar(Math.floor(Math.random()*PALABROS.length))
     },[])
@@ -25,9 +28,24 @@ const Juego = () => {
             setCorrectas([...correctas,(letra)])
         }else{
             setErroneas([...erroneas,(letra)])
+            setImagen(imagen+1)
+            if(imagen>5){
+                navegacion("/final")
+            }
         }
     }
 
+    useEffect(()=>{
+        let noEncontrado=0;
+        palabra.map(p=>{
+            if(misLetras.find(e=>e===p)===undefined){
+                noEncontrado++;
+            }
+        })
+        if(noEncontrado===0 && correctas.length>0){
+            navegacion("/ganado")
+        }
+    },[correctas])
     return (
         <>
         <div className="pregunta">
@@ -59,7 +77,9 @@ const Juego = () => {
                 ))
             }
         </div>
-        <div className="imagen"></div>
+        <div className="imagen">
+            <img src={require(`../assets/el_ahorcado${imagen}.png`)} alt=""/>
+        </div>
         </>
     )
 }
