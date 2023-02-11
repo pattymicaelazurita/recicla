@@ -24,3 +24,6 @@ Para desarrollo de la palicación se tomó para aprendizaje el siguiente video h
 
 ## Repositorio GIT
 https://github.com/pattymicaelazurita/recicla
+
+## Proyecto deployado
+https://recicla.herokuapp.com/
